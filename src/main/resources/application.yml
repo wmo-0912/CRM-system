@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  application:
+    name:
+      CRM
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/sys?serverTimezone=GMT%2B8&useSSL=FALSE
+    username: root
+    password: wangmo233
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis-plus:
+  mapper-locations: classpath:generator/mapper/*.xml
+  global-config:
+      db-config:
+          id-type: auto
+  field-strategy: NOT_EMPTY
+  db-type: MYSQL
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
